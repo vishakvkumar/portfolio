@@ -5,7 +5,7 @@ $listener.Prefixes.Add($prefix)
 $listener.Start()
 Write-Host "Server running at $prefix"
 
-$baseDir = "C:\Users\admin\.gemini\antigravity\scratch\vishak-vijayakumar-portfolio"
+$baseDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
 
 while ($listener.IsListening) {
     try {

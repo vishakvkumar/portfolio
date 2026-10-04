@@ -3,62 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vishak Vijayakumar | Faculty Profile & Technology Portfolio</title>
-  <meta name="description" content="Official portfolio and academic profile of Vishak Vijayakumar, Assistant Professor & Technology Specialist in Cloud Operations, DevOps Engineering, and AI Automation at Rajagiri College of Social Sciences.">
-  <meta name="keywords" content="Vishak Vijayakumar, Rajagiri College, Faculty Profile, DevOps, Cloud Computing, Azure, AWS, Power Platform, AI Automation, MCA">
+  <title>Vishak Vijayakumar | Assistant Professor & Technology Specialist</title>
+  <meta name="description" content="Official academic portfolio of Vishak Vijayakumar, Assistant Professor at Rajagiri College of Social Sciences & Technology Specialist in Cloud Operations, DevOps Engineering, and AI-Driven Automation. Best Paper Award 2026 recipient.">
+  <meta name="keywords" content="Vishak Vijayakumar, Assistant Professor, Rajagiri College of Social Sciences, Cloud Operations, DevOps, Azure, AWS, Power Platform, Best Paper Award, MCA, Cybersecurity">
   <meta name="author" content="Vishak Vijayakumar">
 
   <!-- OpenGraph Meta -->
-  <meta property="og:title" content="Vishak Vijayakumar | Faculty & Technology Specialist">
-  <meta property="og:description" content="Over 5 years of industry experience in Azure, AWS, Kubernetes, CI/CD, and Power Platform. Assistant Professor at Rajagiri College of Social Sciences.">
-  <meta property="og:image" content="assets/vishak_vijayakumar.jpg">
+  <meta property="og:title" content="Vishak Vijayakumar | Assistant Professor & Technology Specialist">
+  <meta property="og:description" content="Assistant Professor at Rajagiri College of Social Sciences with 5+ years of enterprise experience in Azure, AWS, Kubernetes, CI/CD, and Power Platform. Best Paper Award 2026 recipient.">
+  <meta property="og:image" content="https://vishakvijayakumar.netlify.app/assets/vishak_vijayakumar.jpg">
+  <meta property="og:url" content="https://vishakvijayakumar.netlify.app/">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts & Icons -->
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vishak Vijayakumar",
+    "jobTitle": "Assistant Professor",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Rajagiri College of Social Sciences"
+    },
+    "url": "https://vishakvijayakumar.netlify.app/",
+    "sameAs": [
+      "https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/"
+    ],
+    "award": "Best Paper Award – [[CONFERENCE NAME]]"
+  }
+  </script>
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- UST High-Contrast Black & White Stylesheet -->
+  <!-- Aurora Theme Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Ambient Grid Background -->
-  <div class="bg-grid-pattern"></div>
-  <div class="bg-ambient-blur"></div>
+  <!-- Ambient Animated Aurora Blobs & Grid Wrapper -->
+  <div class="aurora-blobs-wrapper">
+    <div class="bg-grid-pattern"></div>
+    <div class="aurora-blob aurora-blob-1"></div>
+    <div class="aurora-blob aurora-blob-2"></div>
+    <div class="aurora-blob aurora-blob-3"></div>
+  </div>
 
   <!-- SITE HEADER / NAVIGATION -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="#" class="brand-logo">
+      <a href="#" class="brand-logo" aria-label="Vishak Vijayakumar Home">
         <div class="brand-monogram">VV</div>
         <div class="brand-info">
           <span class="brand-name">Vishak Vijayakumar</span>
         </div>
       </a>
 
-      <nav>
+      <nav aria-label="Main Navigation">
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#awards" class="nav-link">Awards</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#conferences" class="nav-link">Conferences</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <!-- Mobile-only quick actions -->
+          <li class="nav-menu-mobile-actions">
+            <a href="assets/Vishak_Vijayakumar_Resume.pdf" download="Vishak_Vijayakumar_Resume.pdf" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">
+              <i data-lucide="download"></i> Download CV
+            </a>
+            <a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+              <img src="assets/linkedin-icon.png" alt="LinkedIn" class="social-icon-img"> Connect on LinkedIn
+            </a>
+          </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" class="btn btn-icon btn-secondary" title="LinkedIn Profile">
+        <!-- Download CV Button in Nav (Satisfies Rule 3) -->
+        <a href="assets/Vishak_Vijayakumar_Resume.pdf" download="Vishak_Vijayakumar_Resume.pdf" class="btn btn-primary btn-sm" title="Download Curriculum Vitae (PDF)">
+          <i data-lucide="download"></i> Download CV
+        </a>
+        <a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" class="btn btn-icon btn-secondary" title="LinkedIn Profile" aria-label="Visit LinkedIn Profile">
           <img src="assets/linkedin-icon.png" alt="LinkedIn" class="social-icon-img">
         </a>
-        <button id="theme-toggle-btn" class="btn btn-icon btn-secondary" title="Toggle UST High-Contrast Theme">
-          <i id="theme-icon" data-lucide="sun"></i>
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle-btn" class="btn btn-icon btn-secondary" title="Toggle Aurora Light/Dark Theme" aria-label="Toggle Theme">
+          <i id="theme-icon" data-lucide="moon"></i>
         </button>
-        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
           <i data-lucide="menu"></i>
         </button>
@@ -71,7 +111,15 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-
+          <div class="hero-chip-row">
+            <div class="badge">
+              <span class="badge-dot"></span> Assistant Professor · Rajagiri College
+            </div>
+            <!-- Best Paper Award Chip in Hero scrolling to #awards -->
+            <a href="#awards" class="hero-award-chip" title="View Best Paper Award 2026 details">
+              <i data-lucide="trophy"></i> 🏆 Best Paper Award 2026
+            </a>
+          </div>
 
           <h1 class="hero-title">
             Vishak Vijayakumar
@@ -79,16 +127,23 @@
           </h1>
 
           <p class="hero-description">
-            Accomplished technology professional with over 5 years of industry experience across <strong>Cloud Operations</strong>, <strong>DevOps Engineering</strong>, <strong>AI-Driven Automation</strong>, and <strong>Microsoft Power Platform</strong> development. Dedicated to mentoring students and advancing cutting-edge research at Rajagiri College of Social Sciences.
+            Accomplished technology professional and educator with over 5 years of industry experience across <strong>Cloud Operations</strong>, <strong>DevOps Engineering</strong>, <strong>AI-Driven Automation</strong>, and <strong>Microsoft Power Platform</strong> development. Assistant Professor at Rajagiri College of Social Sciences, dedicated to mentoring students, curriculum innovation, and advancing cutting-edge research.
           </p>
 
           <div class="hero-cta-group">
-            <a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" class="btn btn-primary">
+            <!-- CV Download Button -->
+            <a href="assets/Vishak_Vijayakumar_Resume.pdf" download="Vishak_Vijayakumar_Resume.pdf" class="btn btn-primary" title="Download CV (PDF)">
+              <i data-lucide="download"></i> Download CV
+            </a>
+            <!-- LinkedIn Connect Button -->
+            <a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" class="btn btn-secondary">
               <img src="assets/linkedin-icon.png" alt="LinkedIn" class="social-icon-img"> Connect on LinkedIn
             </a>
+            <!-- View Experience Button -->
             <a href="#experience" class="btn btn-secondary">
-              <i data-lucide="briefcase"></i> View Career History
+              <i data-lucide="briefcase"></i> View Experience
             </a>
+            <!-- Quick Copy Email Button -->
             <button class="contact-quick-pill js-copy-email" title="Click to copy email">
               <i data-lucide="mail"></i>
               <span>vishak@rajagiri.edu</span>
@@ -99,10 +154,12 @@
 
         <div class="hero-image-wrap">
           <div class="profile-card-frame">
-            <img src="assets/vishak_vijayakumar.jpg" alt="Vishak Vijayakumar Portrait" class="profile-image">
-            <div class="profile-overlay-info">
-              <div class="profile-overlay-name">Vishak Vijayakumar</div>
-              <div class="profile-overlay-dept">Assistant Professor, Department of Computer Science, Rajagiri College of Social Sciences, Kalamassery, Autonomous</div>
+            <div class="profile-card-inner">
+              <img src="assets/vishak_vijayakumar.jpg" alt="Vishak Vijayakumar Portrait" class="profile-image">
+              <div class="profile-overlay-info">
+                <div class="profile-overlay-name">Vishak Vijayakumar</div>
+                <div class="profile-overlay-dept">Assistant Professor, Department of Computer Science, Rajagiri College of Social Sciences (Autonomous)</div>
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +167,7 @@
     </div>
   </section>
 
-  <!-- KEY IMPACT STATS STRIP -->
+  <!-- KEY IMPACT STATS STRIP (5 Stats) -->
   <section class="stats-strip">
     <div class="container">
       <div class="stats-grid">
@@ -130,6 +187,10 @@
           <span class="stat-number">7+</span>
           <span class="stat-label">Cloud & AI Certifications</span>
         </div>
+        <div class="stat-card">
+          <span class="stat-number stat-number-accent">1</span>
+          <span class="stat-label">Best Paper Award</span>
+        </div>
       </div>
     </div>
   </section>
@@ -139,7 +200,7 @@
     <div class="container">
       <div class="search-bar-wrap">
         <i data-lucide="search" class="search-icon"></i>
-        <input type="text" id="global-search-input" class="search-input" placeholder="Search skills, technologies, experience, or certifications (e.g. Azure, Kubernetes, Power Apps)...">
+        <input type="text" id="global-search-input" class="search-input" placeholder="Search skills, technologies, experience, awards, or certifications (e.g. Azure, Kubernetes, Best Paper)...">
         <span class="search-hint">Filter Live</span>
       </div>
     </div>
@@ -158,13 +219,13 @@
         <div class="about-card searchable-item">
           <h3>Professional Biography</h3>
           <p>
-            An accomplished technology professional with over 5 years of industry experience in Cloud Operations, DevOps Engineering, and Microsoft Power Platform development. Joining the <strong>Department of Computer Science at Rajagiri College of Social Sciences</strong> with deep expertise in Azure, AWS, Kubernetes, CI/CD pipelines, and AI-driven automation.
+            An accomplished technology professional with over 5 years of industry experience in Cloud Operations, DevOps Engineering, and Microsoft Power Platform development. As faculty in the <strong>Department of Computer Science at Rajagiri College of Social Sciences</strong>, I bring deep enterprise expertise in Azure, AWS, Kubernetes, CI/CD pipelines, and AI-driven automation directly into academic teaching and applied research.
           </p>
           <div class="vision-quote">
             "Passionate about bridging industry practice with academic learning, with a strong foundation in Cybersecurity, cloud infrastructure, and enterprise application development. Committed to mentoring students and contributing to cutting-edge research and curriculum innovation."
           </div>
           <p>
-            Having served as a Product Owner, Application Engineer, and DevOps Lead across major enterprise projects (such as UST RegDatahub and automated Databricks pipelines), I bring practical corporate governance and cutting-edge engineering standards directly into the classroom and research labs.
+            Having served as a Product Owner, Application Engineer, and DevOps Lead across major enterprise projects (including UST RegDatahub, automated Databricks pipelines, and scalable cloud migrations), I incorporate corporate governance and cutting-edge engineering standards directly into the classroom and research labs.
           </p>
         </div>
 
@@ -184,7 +245,7 @@
           <div class="area-card searchable-item">
             <div class="area-icon-wrap"><i data-lucide="git-branch"></i></div>
             <div class="area-title">DevOps & CI/CD</div>
-            <div class="area-tags">Pipeline Design, Kubernetes, Docker, GitLab, Azure DevOps</div>
+            <div class="area-tags">Pipeline Design, Kubernetes (AKS), Docker, GitLab, Azure DevOps</div>
           </div>
 
           <div class="area-card searchable-item">
@@ -196,13 +257,13 @@
           <div class="area-card searchable-item">
             <div class="area-icon-wrap"><i data-lucide="layout"></i></div>
             <div class="area-title">Power Platform</div>
-            <div class="area-tags">Power Apps (Canvas & Model-Driven), Power Automate, Dataverse, Power BI</div>
+            <div class="area-tags">Power Apps (Canvas & Model-Driven), Power Automate, Dataverse, Power BI, Power Pages</div>
           </div>
 
           <div class="area-card searchable-item">
             <div class="area-icon-wrap"><i data-lucide="database"></i></div>
             <div class="area-title">Data Engineering</div>
-            <div class="area-tags">Microsoft Fabric, Azure Data Factory, Databricks, Knowledge Graphs</div>
+            <div class="area-tags">Microsoft Fabric, Azure Data Factory, Databricks, Neo4j Knowledge Graphs</div>
           </div>
         </div>
       </div>
@@ -226,7 +287,7 @@
           </div>
           <div class="edu-institution">Rajagiri College of Social Sciences, Cochin</div>
           <div class="edu-university">Mahatma Gandhi (MG) University</div>
-          <p style="margin-top: 14px; font-size: 0.9rem;">Master of Computer Applications with specialization in Software Engineering, Advanced Cloud Systems, and Enterprise Application Architectures.</p>
+          <p style="margin-top: 14px; font-size: 0.92rem;">Master of Computer Applications with specialization in Software Engineering, Advanced Cloud Systems, and Enterprise Application Architectures.</p>
         </div>
 
         <div class="edu-card searchable-item">
@@ -236,7 +297,7 @@
           </div>
           <div class="edu-institution">Mar Sleeva College of Arts and Science</div>
           <div class="edu-university">Mahatma Gandhi (MG) University</div>
-          <p style="margin-top: 14px; font-size: 0.9rem;">Bachelor of Computer Applications covering core algorithms, database systems, object-oriented programming, and web technology.</p>
+          <p style="margin-top: 14px; font-size: 0.92rem;">Bachelor of Computer Applications covering core algorithms, database systems, object-oriented programming, and web technology.</p>
         </div>
       </div>
     </div>
@@ -248,7 +309,7 @@
       <div class="section-header">
         <span class="section-tag">Professional Track</span>
         <h2 class="section-title">Work Experience</h2>
-        <p class="section-subtitle">5+ years of hands-on software development, DevOps engineering, product ownership, and technical leadership across enterprise and consulting firms.</p>
+        <p class="section-subtitle">5+ years of enterprise software engineering, DevOps leadership, product ownership, and technical consulting across academia and corporate sectors.</p>
       </div>
 
       <div class="experience-timeline">
@@ -265,14 +326,16 @@
               <i data-lucide="graduation-cap"></i> Rajagiri College of Social Sciences · Full-time (Kochi, Kerala, India)
             </div>
             <ul class="exp-bullets">
-              <li>Teaching and mentoring undergraduate and postgraduate students in the Department of Computer Science.</li>
-              <li>Delivering curriculum focused on modern software engineering practices, cloud computing concepts, and core technologies, while aligning academic learning with current industry standards.</li>
+              <li>Teaching and mentoring undergraduate and postgraduate computer science students in core software engineering, distributed systems, and modern cloud architectures.</li>
+              <li>Delivering curriculum focused on modern software engineering practices, cloud computing concepts, and emerging AI technologies, actively aligning academic coursework with current industry benchmarks.</li>
+              <li>Supervising student capstone research projects and leading departmental initiatives in cloud operations, DevOps practices, and cybersecurity labs.</li>
             </ul>
             <div class="exp-tech-tags">
               <span class="tech-tag">Teaching & Mentorship</span>
               <span class="tech-tag">Software Engineering</span>
               <span class="tech-tag">Cloud Computing</span>
               <span class="tech-tag">Curriculum Innovation</span>
+              <span class="tech-tag">Academic Research</span>
             </div>
           </div>
         </div>
@@ -289,8 +352,8 @@
               <i data-lucide="rocket"></i> ReDCom by Nord · Freelance (Kochi, Kerala, India · Remote)
             </div>
             <ul class="exp-bullets">
-              <li>Co-leading a specialized sub-division dedicated to data analysis, research consultation, and academic support.</li>
-              <li>Blending advanced technical resources with robust analytical methodologies to drive data-informed decision making.</li>
+              <li>Co-leading a specialized sub-division dedicated to data analysis, research consultation, and academic technical support.</li>
+              <li>Blending advanced technical resources with robust analytical methodologies to drive data-informed decision making and scholarly publishing.</li>
             </ul>
             <div class="exp-tech-tags">
               <span class="tech-tag">Data Analysis</span>
@@ -313,8 +376,8 @@
               <i data-lucide="globe"></i> Nordvio Tech · Freelance (Kochi, Kerala, India · Remote)
             </div>
             <ul class="exp-bullets">
-              <li>Leading a technology services division specializing in custom software development, cloud infrastructure automation, and IT consulting.</li>
-              <li>Architecting scalable solutions that help businesses streamline operations and transition seamlessly to the cloud.</li>
+              <li>Directing a technology services firm specializing in custom software engineering, cloud infrastructure automation, and enterprise IT consulting.</li>
+              <li>Architecting resilient, highly scalable cloud solutions that help businesses streamline digital workflows and transition securely to multi-cloud environments.</li>
             </ul>
             <div class="exp-tech-tags">
               <span class="tech-tag">Business Ownership</span>
@@ -326,7 +389,7 @@
           </div>
         </div>
 
-        <!-- Position 4: Application Engineer @ Qubiqon -->
+        <!-- Position 4: Application Engineer @ Qubiqon (Enriched with Resume details) -->
         <div class="exp-card searchable-item">
           <div class="exp-marker"></div>
           <div class="exp-content">
@@ -338,23 +401,32 @@
               <i data-lucide="building-2"></i> Qubiqon India Consulting Pvt. Ltd. · Full-time (Kochi, Kerala, India)
             </div>
             <ul class="exp-bullets">
-              <li><strong>6× Performance Benchmark:</strong> Led initiative reducing Azure ADF pipeline run time from 8 hours to 1.5 hours through structural redesign and query optimization.</li>
-              <li>Built automated Databricks pipelines to migrate and execute DLT (Delta Live Tables) notebooks across environments, eliminating manual handoffs.</li>
-              <li>Managed and mentored a team of 10 engineers, providing technical leadership and driving agile delivery cadence.</li>
-              <li>Served as Product Owner, leading sprint planning, backlog prioritization, and stakeholder alignment.</li>
+              <li><strong>6× Performance Benchmark:</strong> Architected and optimized Azure Data Factory (ADF) ETL/ELT pipelines, slashing runtime from 8 hours to 1.5 hours through structural pipeline redesign, query tuning, and data partitioning.</li>
+              <li>Engineered automated Databricks pipelines to migrate and orchestrate Delta Live Tables (DLT) notebooks across dev, QA, and prod environments, eliminating manual release steps.</li>
+              <li>Configured and managed Azure cloud resources: <strong>Azure Monitor & Application Insights</strong> with comprehensive cost analysis, <strong>Azure Database for MySQL & SQL Server</strong> instances, and <strong>Network Security Groups (NSGs)</strong> for traffic isolation.</li>
+              <li>Implemented secure cloud integration utilizing <strong>Azure API Management</strong>, <strong>Azure Event Grid</strong>, and <strong>Azure Function Apps</strong> for serverless event processing.</li>
+              <li>Enforced enterprise governance and secret management utilizing <strong>Azure Key Vault</strong>, <strong>Azure Policy</strong>, and fine-grained <strong>RBAC</strong> permissions.</li>
+              <li>Automated infrastructure provisioning and deployment lifecycles utilizing <strong>PowerShell automation</strong> and declarative <strong>YAML CI/CD pipelines</strong> in Azure DevOps.</li>
+              <li>Managed and mentored a cross-functional team of <strong>10 engineers</strong>, driving sprint execution, architectural code reviews, and stakeholder alignment as Product Owner.</li>
             </ul>
             <div class="exp-tech-tags">
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">Microsoft Azure</span>
-              <span class="tech-tag">Azure ADF</span>
+              <span class="tech-tag">Azure Data Factory (ADF)</span>
               <span class="tech-tag">Databricks DLT</span>
-              <span class="tech-tag">Agile Leadership</span>
+              <span class="tech-tag">Azure Monitor & App Insights</span>
+              <span class="tech-tag">MySQL & SQL Server</span>
+              <span class="tech-tag">Network Security Groups (NSGs)</span>
+              <span class="tech-tag">API Management</span>
+              <span class="tech-tag">Event Grid & Functions</span>
+              <span class="tech-tag">Key Vault & RBAC</span>
+              <span class="tech-tag">PowerShell Automation</span>
+              <span class="tech-tag">YAML CI/CD</span>
+              <span class="tech-tag">Team Mentorship (10 Eng)</span>
               <span class="tech-tag">Product Ownership</span>
             </div>
           </div>
         </div>
 
-        <!-- Position 5: UST (Multi-role 3 yrs 11 mos) -->
+        <!-- Position 5: UST (Enriched with Resume details) -->
         <div class="exp-card searchable-item">
           <div class="exp-marker"></div>
           <div class="exp-content">
@@ -366,23 +438,30 @@
               <i data-lucide="building-2"></i> UST · Full-time (Kochi & Thiruvananthapuram, Kerala, India)
             </div>
             <ul class="exp-bullets">
-              <li><strong>Color Orange Lead & Co-Lead (Oct 2024 – Jun 2025 | Feb 2023 – Oct 2024):</strong> Co-led UST's internal digital transformation and external digital wellbeing initiatives; planned and conducted technical events inspiring engineers to nurture their skills.</li>
-              <li><strong>DevOps Engineer (Apr 2024 – Jun 2025):</strong> Managed Kubernetes microservices in production on Azure & AWS, leading CI/CD pipeline deployments and environment promotion.</li>
-              <li><strong>Developer II / Product Manager (Oct 2022 – Jun 2025):</strong> Product Manager for UST RegDatahub and Account Planner, capturing business requirements and driving release readiness.</li>
-              <li><strong>Microsoft Power Platform Developer (Jun 2022 – Apr 2024):</strong> Delivered Canvas and Model-Driven Power Apps, Power Automate flows connecting Dataverse, SharePoint, and Common Data Service.</li>
-              <li><strong>SaaS & Support Analyst (Dec 2022 – Apr 2024):</strong> Managed SaaS operations, SQL database query optimizations, and technical system analytics.</li>
-              <li><strong>Developer I & Associate Developer (Aug 2021 – Oct 2022):</strong> Core Java development, data modeling, debugging, and enterprise application workflows.</li>
+              <li><strong>Cloud Operations & Kubernetes:</strong> Deployed and managed production containerized microservices on <strong>Azure Kubernetes Service (AKS)</strong> and <strong>AWS EC2</strong>; architected multi-stage CI/CD pipelines in Azure DevOps with automated environment promotion and rollbacks.</li>
+              <li><strong>Infrastructure & Server Administration:</strong> Provisioned and maintained enterprise Windows and Ubuntu servers across Azure and AWS (EC2, EBS, RDS, IAM, Security Groups, and automated S3 backup strategies).</li>
+              <li><strong>Knowledge Graph Systems:</strong> Architected and delivered semantic graph data models using <strong>Neo4j</strong>, deployed and maintained on AWS EC2 instances with automated health monitoring.</li>
+              <li><strong>Microsoft Power Platform & Analytics:</strong> Built and maintained Canvas and Model-Driven <strong>Power Apps</strong> interconnected with <strong>Power BI</strong> reporting dashboards, <strong>Power Pages</strong>, Dataverse, and SharePoint Online to automate corporate operations.</li>
+              <li><strong>Product Management & Delivery:</strong> Served as Product Manager for UST RegDatahub and Account Planner, defining roadmap milestones, technical specifications, and release governance.</li>
+              <li><strong>Corporate Leadership & Engagement:</strong>
+                <ul style="list-style: circle; margin-left: 20px; margin-top: 6px; display: flex; flex-direction: column; gap: 4px;">
+                  <li>Core Team Member for <strong>UST Kochi Foundation Day</strong> (Jul 2022 – Jun 2025).</li>
+                  <li>Editorial and creative team volunteer for the <strong>Reflections UST Newsletter</strong> (Jul 2022 – Jun 2025).</li>
+                  <li>Color Orange Lead & Co-Lead (Feb 2023 – Jun 2025), driving employee digital wellbeing and technical skill-building events across teams.</li>
+                </ul>
+              </li>
             </ul>
             <div class="exp-tech-tags">
-              <span class="tech-tag">Digital Transformation</span>
-              <span class="tech-tag">DevOps</span>
-              <span class="tech-tag">Azure</span>
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">Power Apps</span>
+              <span class="tech-tag">Azure Kubernetes Service (AKS)</span>
+              <span class="tech-tag">AWS EC2 / EBS / RDS / IAM</span>
+              <span class="tech-tag">Neo4j Knowledge Graphs</span>
+              <span class="tech-tag">Azure DevOps CI/CD</span>
+              <span class="tech-tag">Power Apps (Canvas & Model)</span>
+              <span class="tech-tag">Power BI & Power Pages</span>
               <span class="tech-tag">RegDatahub</span>
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">Kubernetes</span>
-              <span class="tech-tag">Core Java</span>
+              <span class="tech-tag">Windows / Ubuntu Server</span>
+              <span class="tech-tag">Foundation Day Core Team</span>
+              <span class="tech-tag">Reflections Newsletter</span>
             </div>
           </div>
         </div>
@@ -399,7 +478,7 @@
               <i data-lucide="book-open"></i> BITS & BYTES ACADEMY · Part-time (Kochi, Kerala, India)
             </div>
             <ul class="exp-bullets">
-              <li>Taught Python programming language concepts, algorithm development, and software design principles to aspiring developers.</li>
+              <li>Taught Python programming language concepts, algorithm development, and software design principles to aspiring developers and engineering students.</li>
             </ul>
             <div class="exp-tech-tags">
               <span class="tech-tag">Python</span>
@@ -421,14 +500,14 @@
               <i data-lucide="code"></i> RlabZ · Internship (Kochi, Kerala, India)
             </div>
             <ul class="exp-bullets">
-              <li>Led development of a NIRF ranking tracker product for Rajagiri College of Social Sciences, working directly with college leadership to deliver the MVP.</li>
-              <li>Contributed to a custom mobile application for the college's Social Work department, handling backend architecture and UI development.</li>
+              <li>Led development of a NIRF ranking tracker product for Rajagiri College of Social Sciences, collaborating directly with institution leadership to ship the MVP.</li>
+              <li>Contributed to a custom mobile application for the college's Social Work department, handling backend architecture and UI integration.</li>
             </ul>
             <div class="exp-tech-tags">
               <span class="tech-tag">NIRF Tracker MVP</span>
               <span class="tech-tag">Mobile Applications</span>
-              <span class="tech-tag">Backend Logic</span>
-              <span class="tech-tag">Public Speaking</span>
+              <span class="tech-tag">Backend Architecture</span>
+              <span class="tech-tag">Rapid Prototyping</span>
             </div>
           </div>
         </div>
@@ -445,18 +524,100 @@
               <i data-lucide="server"></i> SARiGA offset press · Part-time (Idukki, Kerala, India)
             </div>
             <ul class="exp-bullets">
-              <li>Maintained network connectivity and infrastructure between computer systems and high-end offset printing hardware.</li>
-              <li>Managed system administration tasks, created poster graphic designs, and designed custom brand logos for clients.</li>
+              <li>Maintained network connectivity, local server infrastructure, and hardware-software communication between computer systems and high-end offset printing machines.</li>
+              <li>Handled system administration duties, client brand assets, and creative design production.</li>
             </ul>
             <div class="exp-tech-tags">
               <span class="tech-tag">System Administration</span>
               <span class="tech-tag">Network Infrastructure</span>
               <span class="tech-tag">Graphic Design</span>
-              <span class="tech-tag">Logo Creation</span>
+              <span class="tech-tag">Asset Management</span>
             </div>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: AWARDS & PUBLICATIONS -->
+  <section id="awards" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Scholarly Recognition</span>
+        <h2 class="section-title">Awards & Publications</h2>
+        <p class="section-subtitle">Peer-reviewed academic research papers, scholarly honors, and conference recognitions in artificial intelligence, cloud computing, and advanced systems.</p>
+      </div>
+
+      <div class="awards-grid" id="awards-container">
+        <!-- Featured Award Card (Aurora Gradient Border + Soft Coral Glow) -->
+        <div class="award-card-highlight searchable-item" id="award-card-best-paper">
+          <div class="award-card-inner">
+            <div class="award-top-row">
+              <div class="award-trophy-badge">
+                <i data-lucide="trophy"></i>
+                <span>Best Paper Award</span>
+              </div>
+              <div class="award-year-tag">
+                <span>Award Year 2026</span>
+              </div>
+            </div>
+
+            <!-- TODO: Replace [[PAPER TITLE]] with exact paper title -->
+            <h3 class="award-title-main">
+              [[PAPER TITLE]]
+            </h3>
+
+            <div class="award-meta-grid">
+              <div class="award-meta-item">
+                <i data-lucide="award"></i>
+                <div>
+                  <span class="award-meta-label">Conference:</span>
+                  <!-- TODO: Replace [[CONFERENCE NAME]] and [[ORGANISER]] -->
+                  <div>[[CONFERENCE NAME]], organised by [[ORGANISER]]</div>
+                </div>
+              </div>
+
+              <div class="award-meta-item">
+                <i data-lucide="calendar"></i>
+                <div>
+                  <span class="award-meta-label">Date & Venue:</span>
+                  <!-- TODO: Replace [[DATE]] and [[VENUE/CITY]] -->
+                  <div>[[DATE]], [[VENUE/CITY]]</div>
+                </div>
+              </div>
+
+              <div class="award-meta-item">
+                <i data-lucide="users"></i>
+                <div>
+                  <span class="award-meta-label">Co-authors:</span>
+                  <!-- TODO: Replace with [[CO-AUTHORS]] or remove line if single authored -->
+                  <div>[[CO-AUTHORS or remove line]]</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TODO: Replace with 1-2 sentence summary of the paper -->
+            <p class="award-summary">
+              [[1–2 sentence summary of the paper]]
+            </p>
+
+            <!-- Image Note: assets/[[award-image-filename]] if present, otherwise no image -->
+            <!-- Placeholder comment for award image: <img src="assets/[[award-image-filename]]" alt="Best Paper Award Certificate" class="award-img"> -->
+
+            <div class="award-actions">
+              <!-- View Announcement Button linking to LinkedIn -->
+              <a href="https://lnkd.in/p/g33vtKRm" target="_blank" rel="noopener" class="btn btn-coral">
+                <i data-lucide="external-link"></i> View Announcement
+              </a>
+              <!-- Read Paper Button (Placeholder / TODO) -->
+              <!-- TODO: Update href with paper DOI or URL, or remove button if unpublished -->
+              <a href="#" class="btn btn-secondary" onclick="alert('Full paper link will be updated soon. Please view the announcement for details.'); return false;">
+                <i data-lucide="file-text"></i> Read Paper
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -486,13 +647,13 @@
         <!-- Cloud & Infra -->
         <div class="skill-category-card searchable-item" data-category="cloud">
           <div class="skill-cat-header">
-            <i data-lucide="cloud" style="color: var(--text-primary);"></i>
+            <i data-lucide="cloud"></i>
             <div class="skill-cat-title">Cloud & Infrastructure</div>
           </div>
           <div class="skill-pills-list">
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Azure (AZ-104 & DevOps Expert)</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> AWS (CLF-C01)</span>
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Kubernetes</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Kubernetes (AKS)</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Docker Containers</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Microservices Architecture</span>
           </div>
@@ -501,13 +662,13 @@
         <!-- Cybersecurity -->
         <div class="skill-category-card searchable-item" data-category="security">
           <div class="skill-cat-header">
-            <i data-lucide="shield" style="color: var(--text-primary);"></i>
+            <i data-lucide="shield"></i>
             <div class="skill-cat-title">Cybersecurity</div>
           </div>
           <div class="skill-pills-list">
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Network Security</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Network Security (NSGs)</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Threat Analysis</span>
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> IAM Access Control</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> IAM Access Control & RBAC</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> SSL/TLS Security</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Vulnerability Assessment</span>
           </div>
@@ -516,7 +677,7 @@
         <!-- Power Platform -->
         <div class="skill-category-card searchable-item" data-category="power">
           <div class="skill-cat-header">
-            <i data-lucide="layout-grid" style="color: var(--text-primary);"></i>
+            <i data-lucide="layout-grid"></i>
             <div class="skill-cat-title">Power Platform</div>
           </div>
           <div class="skill-pills-list">
@@ -531,7 +692,7 @@
         <!-- AI & Automation -->
         <div class="skill-category-card searchable-item" data-category="ai">
           <div class="skill-cat-header">
-            <i data-lucide="bot" style="color: var(--text-primary);"></i>
+            <i data-lucide="bot"></i>
             <div class="skill-cat-title">AI & Automation</div>
           </div>
           <div class="skill-pills-list">
@@ -546,27 +707,27 @@
         <!-- DevOps & CI/CD -->
         <div class="skill-category-card searchable-item" data-category="devops">
           <div class="skill-cat-header">
-            <i data-lucide="git-merge" style="color: var(--text-primary);"></i>
+            <i data-lucide="git-merge"></i>
             <div class="skill-cat-title">DevOps & CI/CD</div>
           </div>
           <div class="skill-pills-list">
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Azure DevOps Pipelines</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> YAML Pipelines</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> GitLab CI/CD</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Jenkins Automation</span>
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> YAML Pipelines</span>
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Environment Promotion</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Multi-Environment Promotion</span>
           </div>
         </div>
 
         <!-- Data & Fabric -->
         <div class="skill-category-card searchable-item" data-category="data">
           <div class="skill-cat-header">
-            <i data-lucide="database" style="color: var(--text-primary);"></i>
+            <i data-lucide="database"></i>
             <div class="skill-cat-title">Data & Fabric</div>
           </div>
           <div class="skill-pills-list">
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Microsoft Fabric</span>
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Azure Data Factory</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Azure Data Factory (ADF)</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Databricks & DLT</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Neo4j Knowledge Graphs</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Semantic Modeling</span>
@@ -576,11 +737,11 @@
         <!-- Languages & Frameworks -->
         <div class="skill-category-card searchable-item" data-category="lang">
           <div class="skill-cat-header">
-            <i data-lucide="code" style="color: var(--text-primary);"></i>
+            <i data-lucide="code"></i>
             <div class="skill-cat-title">Languages & Web Stack</div>
           </div>
           <div class="skill-pills-list">
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> PowerShell</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> PowerShell Automation</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Python</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Java</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> React</span>
@@ -591,15 +752,15 @@
         <!-- ERP & Integration -->
         <div class="skill-category-card searchable-item" data-category="lang">
           <div class="skill-cat-header">
-            <i data-lucide="layers" style="color: var(--text-primary);"></i>
+            <i data-lucide="layers"></i>
             <div class="skill-cat-title">ERP & Enterprise Databases</div>
           </div>
           <div class="skill-pills-list">
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> SAP ERP</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> SAP ERP Integration</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> SharePoint Online</span>
-            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Common Data Service</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> MySQL & SQL Server</span>
             <span class="skill-pill"><i data-lucide="check-circle-2"></i> Oracle SQL</span>
+            <span class="skill-pill"><i data-lucide="check-circle-2"></i> Common Data Service</span>
           </div>
         </div>
 
@@ -607,7 +768,7 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS SHOWCASE -->
+  <!-- CERTIFICATIONS SHOWCASE (7 Certifications) -->
   <section id="certifications" class="section-padding">
     <div class="container">
       <div class="section-header">
@@ -620,7 +781,7 @@
         <!-- Cert 1 -->
         <div class="cert-card searchable-item" data-issuer="Microsoft" data-details="Expert level certification demonstrating advanced proficiency in Azure DevOps pipeline design, continuous delivery, infrastructure as code, and security integration.">
           <div class="cert-issuer-badge">
-            <i data-lucide="verified" style="color: #3b82f6;"></i> Microsoft Certified
+            <i data-lucide="verified" style="color: #5B4BFF;"></i> Microsoft Certified
           </div>
           <div class="cert-title">Azure DevOps Engineer Expert</div>
           <div class="cert-verify-link">
@@ -632,7 +793,7 @@
         <!-- Cert 2 -->
         <div class="cert-card searchable-item" data-issuer="Microsoft" data-details="Demonstrates skills in configuring, managing, and securing cloud infrastructure including Azure Virtual Machines, Virtual Networks, Storage, and Azure AD (AZ-104).">
           <div class="cert-issuer-badge">
-            <i data-lucide="verified" style="color: #3b82f6;"></i> Microsoft Certified
+            <i data-lucide="verified" style="color: #5B4BFF;"></i> Microsoft Certified
           </div>
           <div class="cert-title">Azure Administrator Associate (AZ-104)</div>
           <div class="cert-verify-link">
@@ -644,7 +805,7 @@
         <!-- Cert 3 -->
         <div class="cert-card searchable-item" data-issuer="Microsoft" data-details="Foundational knowledge of Machine Learning, Computer Vision, Natural Language Processing, and Conversational AI workloads on Azure.">
           <div class="cert-issuer-badge">
-            <i data-lucide="verified" style="color: #3b82f6;"></i> Microsoft Certified
+            <i data-lucide="verified" style="color: #5B4BFF;"></i> Microsoft Certified
           </div>
           <div class="cert-title">Azure AI Fundamentals</div>
           <div class="cert-verify-link">
@@ -656,7 +817,7 @@
         <!-- Cert 4 -->
         <div class="cert-card searchable-item" data-issuer="Microsoft" data-details="Fundamental understanding of cloud concepts, Azure services, workloads, security, privacy, pricing, and support.">
           <div class="cert-issuer-badge">
-            <i data-lucide="verified" style="color: #3b82f6;"></i> Microsoft Certified
+            <i data-lucide="verified" style="color: #5B4BFF;"></i> Microsoft Certified
           </div>
           <div class="cert-title">Azure Fundamentals</div>
           <div class="cert-verify-link">
@@ -692,7 +853,7 @@
         <!-- Cert 7 -->
         <div class="cert-card searchable-item" data-issuer="Agile Leadership Institute" data-details="Leadership certification emphasizing servant leadership, team empowerment, agile facilitation, and empathetic coaching.">
           <div class="cert-issuer-badge">
-            <i data-lucide="shield-check" style="color: #10b981;"></i> Professional Leadership
+            <i data-lucide="shield-check" style="color: #19C6B3;"></i> Professional Leadership
           </div>
           <div class="cert-title">Servant Leader Certification</div>
           <div class="cert-verify-link">
@@ -704,7 +865,7 @@
     </div>
   </section>
 
-  <!-- CONFERENCES & WORKSHOPS -->
+  <!-- CONFERENCES & WORKSHOPS (Both Conferences Preserved) -->
   <section id="conferences" class="section-padding">
     <div class="container">
       <div class="section-header">
@@ -714,7 +875,7 @@
       </div>
 
       <div class="conferences-grid">
-        <!-- Conf 1 -->
+        <!-- Conf 1: India AI Impact Summit 2026 -->
         <div class="conf-card searchable-item">
           <div class="conf-date-loc">
             <span><i data-lucide="calendar" style="width: 14px; height: 14px;"></i> 16–21 February 2026</span>
@@ -729,7 +890,7 @@
           </ul>
         </div>
 
-        <!-- Conf 2 -->
+        <!-- Conf 2: AI Developers' Conference India 2026 -->
         <div class="conf-card searchable-item">
           <div class="conf-date-loc">
             <span><i data-lucide="calendar" style="width: 14px; height: 14px;"></i> 12–13 March 2026</span>
@@ -738,8 +899,8 @@
           <div class="conf-title">AI Developers' Conference India 2026</div>
           <p style="font-size: 0.9rem; color: var(--text-muted);">Focused Developer-Track Conference on Production AI Engineering</p>
           <ul class="conf-bullets">
-            <li>Attended a focused developer-track conference exploring cutting-edge AI engineering, LLMs, and applied AI development practices.</li>
-            <li>Gained exposure to the latest trends in AI tooling, model deployment, and production-grade AI application development.</li>
+            <li>Attended a focused developer-track conference exploring cutting-edge AI engineering, Large Language Models (LLMs), and applied generative AI development practices.</li>
+            <li>Gained exposure to emerging trends in AI tooling, model deployment pipelines, and production-grade AI application architectures.</li>
           </ul>
         </div>
       </div>
@@ -752,7 +913,7 @@
       <div class="section-header" style="text-align: center; align-items: center;">
         <span class="section-tag">Direct Access</span>
         <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">Reach out directly via official email, connect on LinkedIn, or visit the department at Rajagiri.</p>
+        <p class="section-subtitle">Reach out directly via official academic email, connect on LinkedIn, or visit the department at Rajagiri.</p>
       </div>
 
       <div class="contact-cards-grid">
@@ -788,7 +949,7 @@
           <div class="contact-box-content">
             <label>Academic Address</label>
             <h3>Rajagiri College of Social Sciences</h3>
-            <p>Department of Computer Science (Autonomous),<br>Rajagiri Valley, Kakkanad, Cochin - 682039, Kerala</p>
+            <p>Department of Computer Science (Autonomous),<br>Rajagiri Valley, Kakkanad, Cochin - 682039, Kerala, India</p>
           </div>
         </div>
       </div>
@@ -799,16 +960,17 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <div class="brand-logo">
+        <a href="#" class="brand-logo" aria-label="Vishak Vijayakumar Footer Logo">
           <div class="brand-monogram">VV</div>
           <div class="brand-info">
-          <span class="brand-name">Vishak Vijayakumar</span>
-        </div>
-        </div>
+            <span class="brand-name">Vishak Vijayakumar</span>
+          </div>
+        </a>
 
-        <div style="display: flex; gap: 16px;">
+        <div style="display: flex; gap: 18px; flex-wrap: wrap;">
           <a href="#about" class="nav-link">About</a>
           <a href="#experience" class="nav-link">Experience</a>
+          <a href="#awards" class="nav-link">Awards</a>
           <a href="#skills" class="nav-link">Skills</a>
           <a href="#contact" class="nav-link">Contact</a>
         </div>
@@ -816,7 +978,11 @@
 
       <div class="footer-bottom">
         <div>© 2026 Vishak Vijayakumar. All rights reserved. Nordviotech.com.</div>
-        <div><a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" style="color: var(--text-secondary); display: inline-flex; align-items: center; gap: 8px;"><img src="assets/linkedin-icon.png" alt="LinkedIn" class="social-icon-img" style="width: 16px; height: 16px;"> LinkedIn Profile</a></div>
+        <div>
+          <a href="https://www.linkedin.com/in/vishak-vijayakumar-56bba8149/" target="_blank" rel="noopener" style="color: var(--text-secondary); display: inline-flex; align-items: center; gap: 8px;">
+            <img src="assets/linkedin-icon.png" alt="LinkedIn" class="social-icon-img" style="width: 16px; height: 16px;"> LinkedIn Profile
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -824,9 +990,9 @@
   <!-- CONTACT SUCCESS MODAL -->
   <div class="modal-backdrop" id="contact-modal">
     <div class="modal-box">
-      <button class="modal-close-btn" id="modal-close-btn"><i data-lucide="x"></i></button>
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog"><i data-lucide="x"></i></button>
       <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(34, 197, 94, 0.1); color: #22c55e; display: flex; align-items: center; justify-content: center;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(25, 198, 179, 0.15); color: var(--color-secondary); display: flex; align-items: center; justify-content: center;">
           <i data-lucide="check-circle-2" style="width: 36px; height: 36px;"></i>
         </div>
         <h3 style="font-size: 1.5rem; font-weight: 800;">Message Sent Successfully</h3>
@@ -839,12 +1005,12 @@
   <!-- CERTIFICATION DETAIL MODAL -->
   <div class="modal-backdrop" id="cert-modal">
     <div class="modal-box">
-      <button class="modal-close-btn" id="cert-modal-close"><i data-lucide="x"></i></button>
+      <button class="modal-close-btn" id="cert-modal-close" aria-label="Close credential details"><i data-lucide="x"></i></button>
       <div style="display: flex; flex-direction: column; gap: 16px;">
         <div class="badge" style="width: fit-content;">Verified Industry Credential</div>
-        <h3 id="cert-modal-title" style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary);"></h3>
-        <div id="cert-modal-issuer" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted);"></div>
-        <p id="cert-modal-details" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6;"></p>
+        <h3 id="cert-modal-title" style="font-size: 1.55rem; font-weight: 800; color: var(--text-primary);"></h3>
+        <div id="cert-modal-issuer" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--color-primary); font-weight: 600;"></div>
+        <p id="cert-modal-details" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.65;"></p>
         <div style="display: flex; justify-content: flex-end; margin-top: 12px;">
           <button class="btn btn-secondary" onclick="document.getElementById('cert-modal').classList.remove('active')">Dismiss</button>
         </div>
@@ -852,7 +1018,7 @@
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- Application Logic -->
   <script src="app.js"></script>
 </body>
-</html>
+</html>\n

@@ -1,6 +1,26 @@
 /* ==========================================================================
    VISHAK VIJAYAKUMAR - PORTFOLIO INTERACTIVE LOGIC (app.js)
+   Aurora Theme & Awards and Publications Data Management
    ========================================================================== */
+
+// --- AWARDS & PUBLICATIONS DATA ARRAY ---
+// Easily append or modify future papers, awards, or book chapters here!
+const AWARDS_PUBLICATIONS = [
+  {
+    id: "award-best-paper-2026",
+    badge: "Best Paper Award",
+    year: "2026",
+    title: "[[PAPER TITLE]]", // TODO: Replace with official paper title
+    conference: "[[CONFERENCE NAME]]", // TODO: Replace with conference name
+    organiser: "[[ORGANISER]]", // TODO: Replace with organizing body
+    dateVenue: "[[DATE]], [[VENUE/CITY]]", // TODO: Replace with date and venue
+    coAuthors: "[[CO-AUTHORS or remove line]]", // TODO: Replace with co-authors or null
+    summary: "[[1–2 sentence summary of the paper]]", // TODO: Replace with 1-2 sentence summary
+    announcementUrl: "https://lnkd.in/p/g33vtKRm",
+    paperUrl: null, // TODO: Replace with DOI or direct paper URL when published
+    image: null // assets/[[award-image-filename]] if present
+  }
+];
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide Icons
@@ -8,23 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // --- THEME SWITCHER (UST BLACK & WHITE CONTRAST) ---
+  // --- THEME SWITCHER (AURORA THEME: LIGHT / DARK) ---
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const themeIcon = document.getElementById('theme-icon');
-  
-  const savedTheme = localStorage.getItem('vv_theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
 
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('vv_theme', newTheme);
-      updateThemeIcon(newTheme);
-      showToast(`Switched to ${newTheme.toUpperCase()} mode`);
-    });
+  function getPreferredTheme() {
+    try {
+      const savedTheme = localStorage.getItem('vv_theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+    } catch (e) {
+      console.warn('localStorage not accessible, using system preference:', e);
+    }
+    return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('vv_theme', theme);
+    } catch (e) {
+      console.warn('Could not save theme preference:', e);
+    }
+    updateThemeIcon(theme);
   }
 
   function updateThemeIcon(theme) {
@@ -36,6 +63,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (window.lucide) lucide.createIcons();
   }
+
+  // Initial Theme Setup
+  const initialTheme = getPreferredTheme();
+  applyTheme(initialTheme);
+
+  // Toggle Theme Listener
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+      showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Light'} Mode`);
+    });
+  }
+
+  // Listen to OS theme changes if user has not explicitly chosen
+  try {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('vv_theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  } catch (e) {}
 
   // --- MOBILE NAVIGATION TOGGLE ---
   const mobileToggle = document.getElementById('mobile-nav-toggle');
@@ -54,13 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- ACTIVE NAV LINK ON SCROLL ---
+  // --- ACTIVE NAV LINK ON SCROLL (SCROLL SPY) ---
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
   window.addEventListener('scroll', () => {
     let current = '';
-    const scrollPosition = window.scrollY + 120;
+    const scrollPosition = window.scrollY + 130;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -133,11 +183,26 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const email = 'vishak@rajagiri.edu';
-      navigator.clipboard.writeText(email).then(() => {
-        showToast('Email copied: vishak@rajagiri.edu');
-      }).catch(() => {
-        showToast('Direct contact: vishak@rajagiri.edu');
-      });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast('Email copied: vishak@rajagiri.edu');
+        }).catch(() => {
+          showToast('Direct contact: vishak@rajagiri.edu');
+        });
+      } else {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          showToast('Email copied: vishak@rajagiri.edu');
+        } catch (err) {
+          showToast('Direct contact: vishak@rajagiri.edu');
+        }
+        document.body.removeChild(textarea);
+      }
     });
   });
 
@@ -149,14 +214,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('sender-name').value;
-      const subject = document.getElementById('sender-subject').value;
+      const name = document.getElementById('sender-name')?.value || 'Visitor';
+      const subject = document.getElementById('sender-subject')?.value || 'Academic & Consulting Inquiry';
 
       if (modalBackdrop) {
         modalBackdrop.classList.add('active');
         const modalMessage = document.getElementById('modal-user-greeting');
         if (modalMessage) {
-          modalMessage.textContent = `Thank you ${name}! Your request regarding "${subject}" has been received. Vishak Vijayakumar will respond to your email shortly.`;
+          modalMessage.textContent = `Thank you ${name}! Your inquiry regarding "${subject}" has been received. Vishak Vijayakumar will respond shortly at your provided email.`;
         }
       }
       contactForm.reset();
@@ -191,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const modalDetails = document.getElementById('cert-modal-details');
 
       if (modalTitle) modalTitle.textContent = title;
-      if (modalIssuer) modalIssuer.textContent = `Issuer: ${issuer}`;
+      if (modalIssuer) modalIssuer.textContent = `Issued by: ${issuer}`;
       if (modalDetails) modalDetails.textContent = details;
 
       if (certModal) certModal.classList.add('active');
@@ -226,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       toast.style.opacity = '0';
       toast.style.transform = 'translateY(10px)';
-      setTimeout(() => toast.remove(), 300);
-    }, 3000);
+      setTimeout(() => toast.remove(), 350);
+    }, 3200);
   }
 });
